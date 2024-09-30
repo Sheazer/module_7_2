@@ -2,10 +2,9 @@ import io
 
 
 def custom_write(file_name, list):
-    file = open(file_name, 'w')
+    file = open(file_name, 'w', encoding='utf-8')
     string_positions = {}
     for i, j in enumerate(list):
-        j.encode('utf-8')
         count = (i + 1, file.tell())
         string_positions[count] = j
         file.write(j + '\n')
